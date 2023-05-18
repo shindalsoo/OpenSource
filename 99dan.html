@@ -8,27 +8,46 @@
 <body>
     <script>
         var num = prompt("출력할 구구단 숫자 입력", "1");
-        var i = 1;
+        var i, j;
 
         // for 문
-        document.write("for 을 이용한 출력", "<br>");
-        for (i = 1; i < 10; i++) {
-            document.write(num + " * " + i + " = " + (num * i) + "<br>");
-        }
+        document.write("- for 을 이용한 출력", "<br>");
+        for (i = num; i < 10; i++) {
+            document.write("<br>"+"<br>");
+            for (j = 1; j < 10; j++) {
+                document.write(i + " X " + j + " = " + (i * j) + "<br>");
+            }
 
-        i = 1;
+        }
+        document.write("<br>"+"<br>");
+
+       
         // while문
-        document.write("while을 이용한 출력", "<br>");
+        i = num;
+        j = 1;
+        document.write("- while을 이용한 출력", "<br>");
         while (i < 10) {
-            document.write(num + " * " + i + " = " + (num * i) + "<br>");
+            document.write("<br>"+"<br>");
+            while (j < 10) {
+                document.write(i + " X " + j + " = " + (i * j) + "<br>");
+                j++;
+            }
+            j=1;
             i++;
         }
+        document.write("<br>"+"<br>");
         
-        i = 1;
+        i = num;
+        j = 1;
         // do-while 문
-        document.write("do-while을 이용한 출력", "<br>");
+        document.write("- do-while을 이용한 출력", "<br>");
         do {
-            document.write(num + " * " + i + " = " + (num * i) + "<br>");
+            document.write("<br>"+"<br>");
+            do{
+                document.write(i + " X " + j + " = " + (i * j) + "<br>");
+                j++;
+            } while(j<10)
+            j=1;
             i++;
         } while (i < 10)
     </script>
